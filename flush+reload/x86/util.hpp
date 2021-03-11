@@ -88,14 +88,14 @@ CYCLES probe_block2(ADDR_PTR addr)
 	CYCLES cycles;
 
 	asm volatile(
-		"mov %1, %%r8		\n"
-		"lfence				\n"
-		"rdtsc				\n"
-		"mov %%eax, %%edi	\n"
-		"mov (%%r8), %%r8	\n"
-		"lfence				\n"
-		"rdtsc				\n"
-		"sub %%edi, %%eax	\n"
+		"mov %1, %%r8       \n"
+		"lfence             \n"
+		"rdtsc              \n"
+		"mov %%eax, %%edi   \n"
+		"mov (%%r8), %%r8   \n"
+		"lfence	            \n"
+		"rdtsc              \n"
+		"sub %%edi, %%eax   \n"
 		: "=a"(cycles)
 		: "r"(addr)
 		: "r8", "edi");

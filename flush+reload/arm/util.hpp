@@ -53,48 +53,61 @@
 /* Flush a single block given the virtual address addr */
 void flush_one_block(ADDR_PTR addr)
 {
-	asm volatile(
-		"clflush 0(%0)"
-		:
-		: "r"(addr));
+	// __asm (
+	// 	"clflush 0(%0)"
+	// 	:
+	// 	: "r"(addr));
+	__asm__ __volatile__("dc civac, %0" : : "r" (addr) : "memory");  
+
+	// __builtin__clear_cache();
 }
 
-CYCLES probe_one_block(ADDR_PTR adrs)
+// example for add
+// int res = 0;
+//   __asm ("ADD %[result], %[input_i], %[input_j]"
+//     : [result] "=r" (res)
+//     : [input_i] "r" (i), [input_j] "r" (j)
+//   );
+//   return res;
+
+/* Measure the time it takes to access a block given a virtual address addr */
+CYCLES probe_block(ADDR_PTR addr)
 {
-	CYCLES time;
+	CYCLES cycles;
 
 	asm __volatile__(
-		"  mfence             \n"
-		"  lfence             \n"
-		"  rdtsc              \n"
-		"  lfence             \n"
-		"  movl %%eax, %%esi  \n"
+		"  mfence             \n" /* DMB ISH LD */
+		"  lfence             \n" /* DMB ISH */
+		"  rdtsc              \n" /* CCNT */
+		"  lfence             \n" /* DMB ISH LD */
+		"  movl %%eax, %%esi  \n" /*  */
 		"  movl (%1), %%eax   \n"
 		"  lfence             \n"
 		"  rdtsc              \n"
 		"  subl %%esi, %%eax  \n"
 		"  clflush 0(%1)      \n"
-		: "=a"(time)
-		: "c"(adrs)
+		: "=a" (cycles)
+		: "c" (addr)
 		: "%esi", "%edx");
-	return time;
+
+	return cycles;
 }
 
 /* Measure the time it takes to access a block given a virtual address addr */
-CYCLES measure_one_block_access_time(ADDR_PTR addr)
+CYCLES probe_block2(ADDR_PTR addr)
 {
 	CYCLES cycles;
 
 	asm volatile(
-		"mov %1, %%r8\n\t"
-		"lfence\n\t"
-		"rdtsc\n\t"
-		"mov %%eax, %%edi\n\t"
-		"mov (%%r8), %%r8\n\t"
-		"lfence\n\t"
-		"rdtsc\n\t"
-		"sub %%edi, %%eax\n\t"
-		: "=a"(cycles) /*output*/
+		"mov %1, %%r8       \n"
+		"lfence             \n"
+		"rdtsc              \n"
+		"mov %%eax, %%edi   \n"
+		"mov (%%r8), %%r8   \n"
+		"lfence	            \n"
+		"rdtsc              \n"
+		"sub %%edi, %%eax   \n"
+		: "=a"(cycles)
 		: "r"(addr)
 		: "r8", "edi");
 
