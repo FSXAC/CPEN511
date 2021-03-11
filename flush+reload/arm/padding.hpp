@@ -2,4485 +2,4485 @@
 
 // operation padding for send_bit function calls (used to ensure cache line sized functions)
 #define NOP_PADDING			\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	\
-	asm __volatile__ ("nop");	
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	\
+	__asm ("NOP");	
 
 #endif
