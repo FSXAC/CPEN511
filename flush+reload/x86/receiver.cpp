@@ -75,7 +75,7 @@ int main(void)
 			 */
 			for (int i = 0; i < BIT_WIDTH; i++)
 			{
-				CYCLES time = probe_one_block(probe_ptrs[i]);
+				CYCLES time = probe_block(probe_ptrs[i]);
 				if (time < TIME_CUTOFF)
 					hits[i]++;
 			}

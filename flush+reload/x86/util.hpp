@@ -59,9 +59,10 @@ void flush_one_block(ADDR_PTR addr)
 		: "r"(addr));
 }
 
-CYCLES probe_one_block(ADDR_PTR adrs)
+/* Measure the time it takes to access a block given a virtual address addr */
+CYCLES probe_block(ADDR_PTR addr)
 {
-	CYCLES time;
+	CYCLES cycles;
 
 	asm __volatile__(
 		"  mfence             \n"
@@ -74,27 +75,28 @@ CYCLES probe_one_block(ADDR_PTR adrs)
 		"  rdtsc              \n"
 		"  subl %%esi, %%eax  \n"
 		"  clflush 0(%1)      \n"
-		: "=a"(time)
-		: "c"(adrs)
+		: "=a" (cycles)
+		: "c" (addr)
 		: "%esi", "%edx");
-	return time;
+
+	return cycles;
 }
 
 /* Measure the time it takes to access a block given a virtual address addr */
-CYCLES measure_one_block_access_time(ADDR_PTR addr)
+CYCLES probe_block2(ADDR_PTR addr)
 {
 	CYCLES cycles;
 
 	asm volatile(
-		"mov %1, %%r8\n\t"
-		"lfence\n\t"
-		"rdtsc\n\t"
-		"mov %%eax, %%edi\n\t"
-		"mov (%%r8), %%r8\n\t"
-		"lfence\n\t"
-		"rdtsc\n\t"
-		"sub %%edi, %%eax\n\t"
-		: "=a"(cycles) /*output*/
+		"mov %1, %%r8		\n"
+		"lfence				\n"
+		"rdtsc				\n"
+		"mov %%eax, %%edi	\n"
+		"mov (%%r8), %%r8	\n"
+		"lfence				\n"
+		"rdtsc				\n"
+		"sub %%edi, %%eax	\n"
+		: "=a"(cycles)
 		: "r"(addr)
 		: "r8", "edi");
 
