@@ -62,8 +62,9 @@ int main(void)
 	while (sending)
 	{
 		char text_buf[128];
+
+		printf("> ");
 		fgets(text_buf, sizeof(text_buf), stdin);
-		clock_t begin = clock();
 		for (int i = 0; i < 128; i++)
 		{
 			if (text_buf[i] == '\0')
@@ -90,12 +91,7 @@ int main(void)
 
 			wait_for_time(TIME_SLOT * 100);
 		}
-		clock_t end = clock();
-
-		printf("TOTAL TIME SPENT: %f\n", ((double)end - begin) / CLOCKS_PER_SEC);
 	}
-
-	printf("Sender finished.\n");
 
 	return 0;
 }

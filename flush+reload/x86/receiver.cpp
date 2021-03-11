@@ -62,10 +62,6 @@ int main(void)
 			 * Wait for victim to access the gadget and
 			 * perform a load on the same address
 			 */
-			// CYCLES start_t = get_highres_time();
-			// while (get_highres_time() - start_t <= TIME_SLOT)
-			// {
-			// }
 			wait_for_time(TIME_SLOT);
 
 
@@ -105,8 +101,6 @@ int main(void)
 			fflush(stdout);
 		}
 	}
-
-	printf("Receiver finished.\n");
 
 	return 0;
 }
