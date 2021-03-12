@@ -50,17 +50,6 @@
 #define ADDR_7 0x8c27
 #define ADDR_8 0x9dae
 
-/* Flush a single block given the virtual address addr */
-void flush_one_block(ADDR_PTR addr)
-{
-	asm volatile(
-		"dc civac, %0"
-		:
-		: "r" (addr)
-		: "memory"
-	);
-}
-
 // example for add
 // int res = 0;
 //   __asm ("ADD %[result], %[input_i], %[input_j]"
@@ -69,10 +58,37 @@ void flush_one_block(ADDR_PTR addr)
 //   );
 //   return res;
 
+/* Flush a single block given the virtual address addr */
+void flush_one_block(ADDR_PTR addr)
+{
+	#ifdef __arm__
+
+	asm volatile(
+		"dc civac, %0"
+		:
+		: "r" (addr)
+		: "memory"
+	);
+
+	#else
+
+	asm volatile(
+		"clflush 0(%0)"
+		:
+		: "r"(addr));
+
+	#endif
+}
+
 /* Measure the time it takes to access a block given a virtual address addr */
 CYCLES probe_block(ADDR_PTR addr)
 {
 	CYCLES cycles;
+
+	#ifdef __arm__
+
+
+	#else
 
 	asm volatile(
 		"  mfence             \n" /* DMB ISH LD */
@@ -89,6 +105,8 @@ CYCLES probe_block(ADDR_PTR addr)
 		: "c" (addr)
 		: "%esi", "%edx");
 
+	#endif
+
 	return cycles;
 }
 
@@ -96,6 +114,12 @@ CYCLES probe_block(ADDR_PTR addr)
 CYCLES probe_block2(ADDR_PTR addr)
 {
 	CYCLES cycles;
+
+	#ifdef __arm__
+
+	
+
+	#else
 
 	asm volatile(
 		"mov %1, %%r8       \n"
@@ -109,6 +133,9 @@ CYCLES probe_block2(ADDR_PTR addr)
 		: "=a"(cycles)
 		: "r"(addr)
 		: "r8", "edi");
+
+	
+	#endif
 
 	return cycles;
 }
@@ -124,19 +151,26 @@ CYCLES get_highres_time()
 	 * 
 	 * ARMv7 has CCNT instruction
 	 */
+
+	#ifdef __arm__
+
+	#else
+
 	asm volatile(
 		"rdtsc\n"
 		: "=a"(time_lo), "=d"(time_hi)
 	);
 
-	CYCLES time = (uint64_t)time_lo | (((uint64_t)time_hi) << 32);
+	#endif
+
+	CYCLES time = (uint64_t) time_lo | (((uint64_t) time_hi) << 32);
 	return time;
 }
 
 void wait_for_time(CYCLES time)
 {
 	CYCLES start_t = get_highres_time();
-	while(get_highres_time() - start_t < time);
+	while (get_highres_time() - start_t < time);
 }
 
 
