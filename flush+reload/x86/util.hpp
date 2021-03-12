@@ -64,7 +64,7 @@ CYCLES probe_block(ADDR_PTR addr)
 {
 	CYCLES cycles;
 
-	asm __volatile__(
+	asm volatile(
 		"  mfence             \n"
 		"  lfence             \n"
 		"  rdtsc              \n"

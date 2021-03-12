@@ -53,13 +53,12 @@
 /* Flush a single block given the virtual address addr */
 void flush_one_block(ADDR_PTR addr)
 {
-	// __asm (
-	// 	"clflush 0(%0)"
-	// 	:
-	// 	: "r"(addr));
-	__asm__ __volatile__("dc civac, %0" : : "r" (addr) : "memory");  
-
-	// __builtin__clear_cache();
+	asm volatile(
+		"dc civac, %0"
+		:
+		: "r" (addr)
+		: "memory"
+	);
 }
 
 // example for add
@@ -75,7 +74,7 @@ CYCLES probe_block(ADDR_PTR addr)
 {
 	CYCLES cycles;
 
-	asm __volatile__(
+	asm volatile(
 		"  mfence             \n" /* DMB ISH LD */
 		"  lfence             \n" /* DMB ISH */
 		"  rdtsc              \n" /* CCNT */
@@ -127,7 +126,8 @@ CYCLES get_highres_time()
 	 */
 	asm volatile(
 		"rdtsc\n"
-		: "=a"(time_lo), "=d"(time_hi));
+		: "=a"(time_lo), "=d"(time_hi)
+	);
 
 	CYCLES time = (uint64_t)time_lo | (((uint64_t)time_hi) << 32);
 	return time;
