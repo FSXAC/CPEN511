@@ -75,7 +75,8 @@ void flush_one_block(ADDR_PTR addr)
 	asm volatile(
 		"clflush 0(%0)"
 		:
-		: "r"(addr));
+		: "r" (addr)
+	);
 
 	#endif
 }
@@ -85,22 +86,22 @@ CYCLES probe_block(ADDR_PTR addr)
 {
 	CYCLES cycles;
 
+	// MARK: Optional
 	#ifdef __arm__
-
-
+		""
 	#else
 
 	asm volatile(
-		"  mfence             \n" /* DMB ISH LD */
-		"  lfence             \n" /* DMB ISH */
-		"  rdtsc              \n" /* CCNT */
-		"  lfence             \n" /* DMB ISH LD */
-		"  movl %%eax, %%esi  \n" /*  */
-		"  movl (%1), %%eax   \n"
-		"  lfence             \n"
-		"  rdtsc              \n"
-		"  subl %%esi, %%eax  \n"
-		"  clflush 0(%1)      \n"
+		"mfence             \n\t" /* DMB ISH LD */
+		"lfence             \n\t" /* DMB ISH */
+		"rdtsc              \n\t" /* CCNT */
+		"lfence             \n\t" /* DMB ISH LD */
+		"movl %%eax, %%esi  \n\t" /*  */
+		"movl (%1), %%eax   \n\t"
+		"lfence             \n\t"
+		"rdtsc              \n\t"
+		"subl %%esi, %%eax  \n\t"
+		"clflush 0(%1)      \n\t"
 		: "=a" (cycles)
 		: "c" (addr)
 		: "%esi", "%edx");
@@ -115,23 +116,26 @@ CYCLES probe_block2(ADDR_PTR addr)
 {
 	CYCLES cycles;
 
+	// MARK: TODO
 	#ifdef __arm__
 
-	
+	asm volatile(
+		""
+	);
 
 	#else
 
 	asm volatile(
-		"mov %1, %%r8       \n"
-		"lfence             \n"
-		"rdtsc              \n"
-		"mov %%eax, %%edi   \n"
-		"mov (%%r8), %%r8   \n"
-		"lfence	            \n"
-		"rdtsc              \n"
-		"sub %%edi, %%eax   \n"
-		: "=a"(cycles)
-		: "r"(addr)
+		"mov %1, %%r8       \n\t"	/* move [addr] to register R8 */
+		"lfence	            \n\t"	/* ~~~ memory (load) fence ~~~ */
+		"rdtsc              \n\t"	/* read timestamp counter in {EDX:EAX} */
+		"mov %%eax, %%edi   \n\t"	/* save LS32-bits of time stamp into EDI */
+		"mov (%%r8), %%r8   \n\t"	/* load #(R8) into R8 */
+		"lfence	            \n\t"	/* ~~~ memory (load) fence ~~~ */
+		"rdtsc              \n\t"	/* read timestamp counter again */
+		"sub %%edi, %%eax"			/* subtract LS32-bits of timestamp (EAX - EDI) to get the cycles measured */
+		: "=a" (cycles)				/* output the accumulator into [cycles] variable */
+		: "r" (addr)
 		: "r8", "edi");
 
 	
@@ -152,13 +156,14 @@ CYCLES get_highres_time()
 	 * ARMv7 has CCNT instruction
 	 */
 
+	// MARK: TODO
 	#ifdef __arm__
 
 	#else
 
 	asm volatile(
-		"rdtsc\n"
-		: "=a"(time_lo), "=d"(time_hi)
+		"rdtsc"
+		: "=a" (time_lo), "=d" (time_hi)
 	);
 
 	#endif
