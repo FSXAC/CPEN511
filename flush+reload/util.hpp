@@ -81,7 +81,7 @@ void flush_one_block(ADDR_PTR addr)
 	#endif
 }
 
-/* Measure the time it takes to access a block given a virtual address addr */
+/* Measure the time it takes to access a block given a virtual address addr and then flush the block at the end of the read */
 CYCLES probe_block(ADDR_PTR addr)
 {
 	CYCLES cycles;

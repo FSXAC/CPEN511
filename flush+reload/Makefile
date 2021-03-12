@@ -9,6 +9,9 @@ sender: sender.cpp util.hpp padding.hpp
 receiver: receiver.cpp util.hpp padding.hpp
 	$(CC) $(CFLAGS) $^ -o $@
 
+calibration: calibration.cpp util.hpp
+	$(CC) $(CFLAGS) $^ -o $@
+
 .PHONY: clean
 
 clean:
