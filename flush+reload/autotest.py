@@ -88,5 +88,4 @@ class AutoTest:
 
 if __name__ == '__main__':
     AutoTest.sweepThreshold(50, 280, 10, slee=0.5)
-
-    
+        
