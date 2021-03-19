@@ -1,7 +1,12 @@
 #include "util.hpp"
 
-int main(void)
+unsigned int hit_threshold;
+
+int main(int argc, char *argv[])
 {
+	/* Get the cycle threshold */
+	hit_threshold = atoi(argv[1]);
+
 	/**
 	 * Open the same file/victim/sender program
 	 * and map it in memory (since both victim and receiver knows the address)
@@ -33,7 +38,7 @@ int main(void)
 	getchar();
 	#endif 
 
-	printf("Receiver now listening with hit threshold %d.\n", TIME_CUTOFF);
+	printf("Receiver now listening with hit threshold %d.\n", hit_threshold);
 
 	/**
 	 * Receiver collection bin
@@ -82,7 +87,7 @@ int main(void)
 			{
 				CYCLES time = probe_block(probe_ptrs[i]);
 				flush_one_block(probe_ptrs[i]);
-				if (time < TIME_CUTOFF)
+				if (time < hit_threshold)
 					hits[i]++;
 			}
 		}
