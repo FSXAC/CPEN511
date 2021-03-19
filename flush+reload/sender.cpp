@@ -75,8 +75,8 @@ int main(void)
 			/**
 			 * Pulse the bits to the covert channel
 			 */
-			CYCLES start_t = get_highres_time();
-			while (get_highres_time() - start_t < SLOT_HIT_CUTOFF * TIME_SLOT * SENDER_PULSE)
+			CYCLES start_t = get_cycles();
+			while (get_cycles() - start_t < SLOT_HIT_CUTOFF * TIME_SLOT * SENDER_PULSE)
 			{
 				send_bit(c, 0);
 				send_bit(c, 1);

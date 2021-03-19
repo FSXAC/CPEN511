@@ -101,9 +101,6 @@ void init(void)
 	#endif
 }
 
-/* Read cycle count (PMCCNTR is c9, 0, c13, 0) */
-/* asm volatile ("MRC p15, 0, %0, c9, c13, 0\t\n": "=r"(value)); */
-
 /* Flush a single block given the virtual address addr */
 void flush_one_block(ADDR_PTR addr)
 {
@@ -133,6 +130,7 @@ CYCLES probe_block(ADDR_PTR addr)
 	CYCLES cycles;
 
 	// MARK: TODO
+	
 	#ifdef __arm__
 
 	asm volatile(
@@ -160,22 +158,27 @@ CYCLES probe_block(ADDR_PTR addr)
 	return cycles;
 }
 
-CYCLES get_highres_time()
+CYCLES get_cycles()
 {
 	volatile uint32_t time_lo;
 	volatile uint32_t time_hi;
 
+	#ifdef __arm__
+
+	/* Read cycle count (PMCCNTR is c9, 0, c13, 0) */
+	asm volatile (
+		"MRC p15, 0, %0, c9, c13, 0\n\t"
+		: "=r" (time_lo)
+	);
+	time_hi = 0;
+
+	#else
+
 	/**
 	 * RDTSC returns the number of cycles since reset
 	 * Obtain high resolution cycle/timing information
-	 * 
-	 * ARMv7 has CCNT instruction
 	 */
 
-	// MARK: TODO
-	#ifdef __arm__
-
-	#else
 
 	asm volatile(
 		"rdtsc"
@@ -190,8 +193,8 @@ CYCLES get_highres_time()
 
 void wait_for_time(CYCLES time)
 {
-	CYCLES start_t = get_highres_time();
-	while (get_highres_time() - start_t < time);
+	CYCLES start_t = get_cycles();
+	while (get_cycles() - start_t < time);
 }
 
 
