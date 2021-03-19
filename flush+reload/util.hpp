@@ -50,13 +50,59 @@
 #define ADDR_7 0x8c27
 #define ADDR_8 0x9dae
 
-// example for add
-// int res = 0;
-//   __asm ("ADD %[result], %[input_i], %[input_j]"
-//     : [result] "=r" (res)
-//     : [input_i] "r" (i), [input_j] "r" (j)
-//   );
-//   return res;
+void init(void)
+{
+	#ifdef __arm__
+	/**
+	 * http://qcd.phys.cmu.edu/QCDcluster/intel/vtune/reference/INST_MRC.htm 
+	 * https://stackoverflow.com/questions/12179872/what-does-mrc-p15-do-in-arm-inline-assembly-and-how-does-gnu-c-inline-asm-synta
+	 * 
+	 * Use `MRC` instruction to move data from coprocessor to core registers
+	 * 
+	 * MRC[condition] cpname, cpopcode1, dest, cpsource, cpreg[, cpopcode2]
+	 * 
+	 * condition 	- One of 16 conditions. Refer to Condition Code Status.
+	 * cpname		- name of the coprocessor (p0..p15)
+	 * cpopcode1	- coprocessor cpname operation
+	 * dest			- destination register
+	 * cpsource		- source coprocessor register
+	 * cpreg		- additional coprocessor register
+	 * cpopcode2	- coprocessor cpname operation
+	 */
+
+
+	/**
+	 * https://stackoverflow.com/questions/3247373/how-to-measure-program-execution-time-in-arm-cortex-a8-processor
+	 * 
+	 * Use MRC to control the CONTROL-COPROCESSOR (p15)
+	 *
+	 */
+
+	/* Enable user mode access to performance counters */
+	asm volatile ("MCR p15, 0, %0, C9, C14, 0\n\t" :: "r" (1));
+
+	/* Disable counter interrupts */
+	asm volatile ("MCR p15, 0, %0, C9, C14, 2\n\t" :: "r" (0x8000000f));
+
+	/**
+	 * Write to PMCR
+	 * 
+	 * [0] - Enable all counters including CCNT
+	 * [1] - Reset all performance counters to zero (except CCNT)
+	 * [2] - Reset cycle counter (CCNT)
+	 */
+	asm volatile ("MCR p15, 0, %0, C9, C12, 0\n\t" :: "r" (0x03))
+
+	/* Enable all counters */
+	asm volatile ("MCR p15, 0, %0, C9, C12, 1\n\t" :: "r" (0x8000000f));
+
+	/* Clear overflows */
+	asm volatile ("MCR p15, 0, %0, C9, C12, 3\n\t" :: "r" (0x8000000f));
+	#endif
+}
+
+/* Read cycle count (PMCCNTR is c9, 0, c13, 0) */
+/* asm volatile ("MRC p15, 0, %0, c9, c13, 0\t\n": "=r"(value)); */
 
 /* Flush a single block given the virtual address addr */
 void flush_one_block(ADDR_PTR addr)
@@ -81,38 +127,8 @@ void flush_one_block(ADDR_PTR addr)
 	#endif
 }
 
-/* Measure the time it takes to access a block given a virtual address addr and then flush the block at the end of the read */
-CYCLES probe_block(ADDR_PTR addr)
-{
-	CYCLES cycles;
-
-	// MARK: Optional
-	#ifdef __arm__
-		""
-	#else
-
-	asm volatile(
-		"mfence             \n\t" /* DMB ISH LD */
-		"lfence             \n\t" /* DMB ISH */
-		"rdtsc              \n\t" /* CCNT */
-		"lfence             \n\t" /* DMB ISH LD */
-		"movl %%eax, %%esi  \n\t" /*  */
-		"movl (%1), %%eax   \n\t"
-		"lfence             \n\t"
-		"rdtsc              \n\t"
-		"subl %%esi, %%eax  \n\t"
-		"clflush 0(%1)      \n\t"
-		: "=a" (cycles)
-		: "c" (addr)
-		: "%esi", "%edx");
-
-	#endif
-
-	return cycles;
-}
-
 /* Measure the time it takes to access a block given a virtual address addr */
-CYCLES probe_block2(ADDR_PTR addr)
+CYCLES probe_block(ADDR_PTR addr)
 {
 	CYCLES cycles;
 

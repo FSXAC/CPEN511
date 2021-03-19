@@ -29,6 +29,9 @@ void access(void *addr)
 }
 
 int main(void) {
+
+    init();
+
     /* Set set-value of array to a bunch of -1 */
     memset(array, -1, 5 * 1024 * sizeof(size_t));
 
@@ -37,7 +40,7 @@ int main(void) {
     for (int i = 0; i < PROBES; i++)
     {
         /* Probe an address in the middle of the array */
-        size_t d = probe_block2((ADDR_PTR) array + 2 * 1024);
+        size_t d = probe_block((ADDR_PTR) array + 2 * 1024);
         hit_histogram[MIN(PROBES_RANGE - 1, d)]++;
     }
 
@@ -47,7 +50,7 @@ int main(void) {
     /* Access data from main memory */
     for (int i = 0; i < PROBES; i++)
     {
-        size_t d = probe_block2((ADDR_PTR) array + 2 * 1024);
+        size_t d = probe_block((ADDR_PTR) array + 2 * 1024);
         flush_one_block((ADDR_PTR) array + 2 * 1024);
         miss_histogram[MIN(PROBES_RANGE - 1, d)]++;
     }
