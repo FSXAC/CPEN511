@@ -10,7 +10,7 @@ receiver: receiver.cpp util.hpp padding.hpp
 	$(CC) $(CFLAGS) $^ -o $@
 
 calibration: calibration.cpp util.hpp
-	$(CC) $(CFLAGS) $^ -o $@
+	$(CC) $(CFLAGS) $^ -o $@ -O2
 
 .PHONY: clean
 
