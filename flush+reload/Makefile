@@ -16,4 +16,4 @@ calibration: calibration.cpp util.hpp
 .PHONY: clean
 
 clean:
-	rm *.o $(HELPERS) sender receiver calibration
+	rm $(HELPERS) sender receiver calibration

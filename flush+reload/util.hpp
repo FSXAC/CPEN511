@@ -19,7 +19,7 @@
 
 #include "padding.hpp"
 
-#define RUN_ONCE
+// #define RUN_ONCE
 
 #define ADDR_PTR uint64_t
 #define CYCLES volatile uint64_t
@@ -28,7 +28,9 @@
 #define CACHE_LINE_SIZE 64
 
 /* Number of cycles considered as a threshold to be a hit */
+#ifndef TIME_CUTOFF
 #define TIME_CUTOFF 200
+#endif
 
 /* Time quantum for a single  */
 #define TIME_SLOT 2500
