@@ -19,6 +19,8 @@
 
 #include "padding.hpp"
 
+#define RUN_ONCE
+
 #define ADDR_PTR uint64_t
 #define CYCLES volatile uint64_t
 

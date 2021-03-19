@@ -91,6 +91,10 @@ int main(void)
 
 			wait_for_time(TIME_SLOT * 100);
 		}
+
+		#ifdef RUN_ONCE
+		sending = false;
+		#endif
 	}
 
 	return 0;

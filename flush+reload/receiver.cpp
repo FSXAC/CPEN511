@@ -28,7 +28,12 @@ int main(void)
 	probe_ptrs[7] = (ADDR_PTR) (mapped + ADDR_7 + mult * CACHE_LINE_SIZE);
 	probe_ptrs[8] = (ADDR_PTR) (mapped + ADDR_8 + mult * CACHE_LINE_SIZE);
 
-	printf("Receiver now listening.\n");
+	#ifdef RUN_ONCE
+	printf("Press enter to start listening.\n");
+	getchar();
+	#endif 
+
+	printf("Receiver now listening with hit threshold %d.\n", TIME_CUTOFF);
 
 	/**
 	 * Receiver collection bin
@@ -100,6 +105,12 @@ int main(void)
 			 */
 			printf("%c", (char) bitstr);
 			fflush(stdout);
+
+			#ifdef RUN_ONCE
+			if (bitstr == '\n') {
+				listening = false;
+			}
+			#endif
 		}
 	}
 
