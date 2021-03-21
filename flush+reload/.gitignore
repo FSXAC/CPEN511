@@ -3,3 +3,6 @@ receiver
 calibration
 calibration_stats.csv
 receiver_out.txt
+sender.arm
+receiver.arm
+calibration.arm
