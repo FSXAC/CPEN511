@@ -1,7 +1,8 @@
 CFLAGS=-std=c++11 -I /usr/local -O0
 CEXTRAS=
 CC=g++
-CCARM=aarch64-linux-gnu-g++
+# CCARM=aarch64-linux-gnu-gcc
+CCARM=arm-linux-gnueabihf-gcc
 
 all: sender receiver calibration
 
@@ -14,16 +15,16 @@ receiver: receiver.cpp util.hpp padding.hpp
 calibration: calibration.cpp util.hpp
 	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
 
-all_arm: sender.arm64 receiver.arm64 calibration.arm64
+all_arm: sender.arm receiver.arm calibration.arm
 
-sender.arm64: sender.cpp util.hpp padding.hpp
-	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
+sender.arm: sender.cpp util.hpp padding.hpp
+	$(CCARM) $(CFLAGS) -D__arm__ $(CEXTRAS) $^ -o $@
 
-receiver.arm64: receiver.cpp util.hpp padding.hpp
-	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
+receiver.arm: receiver.cpp util.hpp padding.hpp
+	$(CCARM) $(CFLAGS) -D__arm__ $(CEXTRAS) $^ -o $@
 
-calibration.arm64: calibration.cpp util.hpp
-	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
+calibration.arm: calibration.cpp util.hpp
+	$(CCARM) $(CFLAGS) -D__arm__ $(CEXTRAS) $^ -o $@
 
 .PHONY: clean
 

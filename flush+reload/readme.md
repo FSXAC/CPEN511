@@ -43,7 +43,7 @@ This procedure is taken mostly form <https://www.96boards.org/documentation/guid
 - Compile using the crosscompiler
   ```shell
   # aarch32
-  arm-linux-gnueabihf <source_file.c> -o <out_name>.arm32
+  arm-linux-gnueabihf-gcc <source_file.c> -o <out_name>.arm32
 
   # aarch64
   aarch64-linux-gnu-gcc <source _ile.c> -o <out_name>.arm64

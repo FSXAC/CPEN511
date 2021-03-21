@@ -58,7 +58,8 @@ void init(void)
 	 * 
 	 * MRC[condition] cpname, cpopcode1, dest, cpsource, cpreg[, cpopcode2]
 	 * 
-	 * condition 	- One of 16 conditions. Refer to Condition Code Status.
+	 * condition 	
+	 * - One of 16 conditions. Refer to Condition Code Status.
 	 * cpname		- name of the coprocessor (p0..p15)
 	 * cpopcode1	- coprocessor cpname operation
 	 * dest			- destination register
@@ -88,7 +89,7 @@ void init(void)
 	 * [1] - Reset all performance counters to zero (except CCNT)
 	 * [2] - Reset cycle counter (CCNT)
 	 */
-	asm volatile ("MCR p15, 0, %0, C9, C12, 0\n\t" :: "r" (0x03))
+	asm volatile ("MCR p15, 0, %0, C9, C12, 0\n\t" :: "r" (0x03));
 
 	/* Enable all counters */
 	asm volatile ("MCR p15, 0, %0, C9, C12, 1\n\t" :: "r" (0x8000000f));
@@ -103,8 +104,15 @@ void flush_one_block(ADDR_PTR addr)
 {
 	#ifdef __arm__
 
+	// asm volatile(
+	// 	"dc civac, %0"
+	// 	:
+	// 	: "r" (addr)
+	// 	: "memory"
+	// );
+
 	asm volatile(
-		"dc civac, %0"
+		"mcr p15, 0, %0, c7, c10, 1"
 		:
 		: "r" (addr)
 		: "memory"
@@ -133,15 +141,14 @@ CYCLES probe_block(ADDR_PTR addr)
 	CYCLES cycles_end;
 
 	asm volatile(
-		"mov r8, #%2 \n\t"
 		"dmb ish \n\t"
-		"mrc p15, 0, %0, c9, c13, 0 \n\t"
-		"ldr r8, [r8] \n\t"
+		"mrc p15, 0, %[start], c9, c13, 0 \n\t"
+		"ldr r8, [%[addr]] \n\t"
 		"dmb ish \n\t"
-		"mrc p15, 0, %1, c9, c13, 0 \n\t"
-		: "=r" (cycles_start), "=r" (cycles_end)
-		: "r" (addr)
-		: "memory"
+		"mrc p15, 0, %[end], c9, c13, 0 \n\t"
+		: [start] "=r" (cycles_start), [end] "=r" (cycles_end)
+		: [addr] "r" (addr)
+		: "r8"
 	);
 
 	return cycles_end - cycles_start;

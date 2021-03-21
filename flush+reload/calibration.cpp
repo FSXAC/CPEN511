@@ -20,12 +20,21 @@ size_t miss_histogram[PROBES_RANGE];
 
 void access(void *addr)
 {
+    #ifdef __arm__
+    asm volatile (
+        "ldr r8, [%[addr]]"
+        :
+        : [addr] "r" (addr)
+        : "r8"
+    );
+    #else
     asm volatile (
         "mov (%0), %%eax"
         :
         : "c" (addr)
         : "eax"
     );
+    #endif
 }
 
 int main(void) {
