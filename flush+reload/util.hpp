@@ -124,17 +124,31 @@ void flush_one_block(ADDR_PTR addr)
 /* Measure the time it takes to access a block given a virtual address addr */
 CYCLES probe_block(ADDR_PTR addr)
 {
-	CYCLES cycles;
 
-	// MARK: TODO
-	
+	// MARK: not tested yet
+
 	#ifdef __arm__
 
+	CYCLES cycles_start;
+	CYCLES cycles_end;
+
 	asm volatile(
-		""
+		"mov r8, #%2 \n\t"
+		"dmb ish \n\t"
+		"mrc p15, 0, %0, c9, c13, 0 \n\t"
+		"ldr r8, [r8] \n\t"
+		"dmb ish \n\t"
+		"mrc p15, 0, %1, c9, c13, 0 \n\t"
+		: "=r" (cycles_start), "=r" (cycles_end)
+		: "r" (addr)
+		: "memory"
 	);
 
+	return cycles_end - cycles_start;
+
 	#else
+
+	CYCLES cycles;
 
 	asm volatile(
 		"mov %1, %%r8       \n\t"	/* move [addr] to register R8 */
@@ -149,10 +163,10 @@ CYCLES probe_block(ADDR_PTR addr)
 		: "r" (addr)
 		: "r8", "edi");
 
+	return cycles;
 	
 	#endif
 
-	return cycles;
 }
 
 CYCLES get_cycles()
