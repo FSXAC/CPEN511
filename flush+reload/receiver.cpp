@@ -4,8 +4,11 @@ unsigned int hit_threshold;
 
 int main(int argc, char *argv[])
 {
-	/* Get the cycle threshold */
-	hit_threshold = atoi(argv[1]);
+	/* Get the cycle threshold, default = 200 */
+	if (argc > 1)
+		hit_threshold = atoi(argv[1]);
+	else
+		hit_threshold = 200;
 
 	/**
 	 * Open the same file/victim/sender program
