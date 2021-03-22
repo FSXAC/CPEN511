@@ -99,6 +99,18 @@ void init(void)
 	
 	#elif defined(__arm64__)
 
+	/**
+	 * Same as aarch32 except MCR is no longer supported instruction
+	 * so we use MSR to access the system registers directy
+	 * 
+	 * https://stackoverflow.com/questions/32374599/mcr-and-mrc-does-not-exist-on-aarch64
+	 */
+
+	asm volatile ("msr pmuserenr_el0, %0" :: "r" (1));
+	asm volatile ("msr pmintenclr_el1, %0" :: "r" (0x8000000f));
+	asm volatile ("msr pmcr_el0, %0" :: "r" (0x03));
+	asm volatile ("msr pmcntenset_el0, %0" :: "r" (0x8000000f));
+	asm volatile ("msr pmovsclr_el0, %0" :: "r" (0x8000000f));
 
 	#endif
 }
@@ -117,7 +129,12 @@ void flush_one_block(ADDR_PTR addr)
 
 	#elif defined(__arm64__)
 
-
+	asm volatile (
+		"dc civac, %0"
+		:
+		: "r" (addr)
+		: "memory"
+	);
 
 	#else
 
@@ -152,6 +169,22 @@ CYCLES probe_block(ADDR_PTR addr)
 	return cycles_end - cycles_start;
 
 	#elif defined(__arm64__)
+
+	CYCLES cycles_start;
+	CYCLES cycles_end;
+
+	asm volatile(
+		"dmb ld \n\t"
+		"msr pcccntr_el0, %[start]\n\t"
+		"ldr r8, [%[addr]] \n\t"
+		"dmb ld \n\t"
+		"msr pcccntr_el0, %[end]\n\t"
+		: [start] "=r" (cycles_start), [end] "=r" (cycles_end)
+		: [addr] "r" (addr)
+		: "r8"
+	);
+
+	return cycles_end - cycles_start;
 
 	#else
 
@@ -204,12 +237,18 @@ CYCLES get_cycles()
 
 	/* Read cycle count (PMCCNTR is c9, 0, c13, 0) */
 	asm volatile (
-		"MRC p15, 0, %0, c9, c13, 0\n\t"
+		"mrc p15, 0, %0, c9, c13, 0"
 		: "=r" (time_lo)
 	);
 	time_hi = 0;
 
 	#elif defined(__arm64__)
+
+	asm volatile (
+		"msr pmccntr_el0, %0"
+		: "=r" (time_lo)
+	);
+	time_hi = 0;
 
 	#else
 
@@ -217,8 +256,7 @@ CYCLES get_cycles()
 	 * RDTSC returns the number of cycles since reset
 	 * Obtain high resolution cycle/timing information
 	 */
-
-
+	
 	asm volatile(
 		"rdtsc"
 		: "=a" (time_lo), "=d" (time_hi)
