@@ -51,3 +51,20 @@ This procedure is taken mostly form <https://www.96boards.org/documentation/guid
 - Check the output using the `file <binary>` command
 
 Instead of calling the compiler manually, we can instead override the compiler variable in the Makefile: `make CC=aarch64-linux-gnu-g++` for example.
+
+### Copying Binaries to Simulator Image
+
+In gem5 simulator, we can mount the simulator disk image to host OS's directory:
+
+```
+# Use fdisk to check the start sector of the disk img
+sudo fdisk -l <path_to_disk>
+
+# To also find the unit size
+sudo fdisk -l <path_to_disk> | grep Units
+
+sudo mount -o loop,offset=<start_sector * unit_size> <path_to_disk> <path_to_mounting_point>
+```
+
+> For the ubuntu-18.04-arm64-docker.img, the start_sector is 128, and the unit size is 512 bytes, so the offset is just 65536
+

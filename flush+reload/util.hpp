@@ -49,7 +49,7 @@
 
 void init(void)
 {
-	#ifdef __arm__
+	#if defined(__arm__)
 	/**
 	 * http://qcd.phys.cmu.edu/QCDcluster/intel/vtune/reference/INST_MRC.htm 
 	 * https://stackoverflow.com/questions/12179872/what-does-mrc-p15-do-in-arm-inline-assembly-and-how-does-gnu-c-inline-asm-synta
@@ -96,20 +96,17 @@ void init(void)
 
 	/* Clear overflows */
 	asm volatile ("MCR p15, 0, %0, C9, C12, 3\n\t" :: "r" (0x8000000f));
+	
+	#elif defined(__arm64__)
+
+
 	#endif
 }
 
 /* Flush a single block given the virtual address addr */
 void flush_one_block(ADDR_PTR addr)
 {
-	#ifdef __arm__
-
-	// asm volatile(
-	// 	"dc civac, %0"
-	// 	:
-	// 	: "r" (addr)
-	// 	: "memory"
-	// );
+	#if defined(__arm__)
 
 	asm volatile(
 		"mcr p15, 0, %0, c7, c10, 1"
@@ -117,6 +114,10 @@ void flush_one_block(ADDR_PTR addr)
 		: "r" (addr)
 		: "memory"
 	);
+
+	#elif defined(__arm64__)
+
+
 
 	#else
 
@@ -132,10 +133,7 @@ void flush_one_block(ADDR_PTR addr)
 /* Measure the time it takes to access a block given a virtual address addr */
 CYCLES probe_block(ADDR_PTR addr)
 {
-
-	// MARK: not tested yet
-
-	#ifdef __arm__
+	#if defined(__arm__)
 
 	CYCLES cycles_start;
 	CYCLES cycles_end;
@@ -152,6 +150,8 @@ CYCLES probe_block(ADDR_PTR addr)
 	);
 
 	return cycles_end - cycles_start;
+
+	#elif defined(__arm64__)
 
 	#else
 
@@ -173,7 +173,26 @@ CYCLES probe_block(ADDR_PTR addr)
 	return cycles;
 	
 	#endif
+}
 
+void access(void *addr)
+{
+    #if defined(__arm__) || defined(__arm64__)
+    asm volatile (
+        "ldr r8, [%[addr]]"
+        :
+        : [addr] "r" (addr)
+        : "r8"
+    );
+
+    #else
+    asm volatile (
+        "mov (%0), %%eax"
+        :
+        : "c" (addr)
+        : "eax"
+    );
+    #endif
 }
 
 CYCLES get_cycles()
@@ -181,7 +200,7 @@ CYCLES get_cycles()
 	volatile uint32_t time_lo;
 	volatile uint32_t time_hi;
 
-	#ifdef __arm__
+	#if defined(__arm__)
 
 	/* Read cycle count (PMCCNTR is c9, 0, c13, 0) */
 	asm volatile (
@@ -189,6 +208,8 @@ CYCLES get_cycles()
 		: "=r" (time_lo)
 	);
 	time_hi = 0;
+
+	#elif defined(__arm64__)
 
 	#else
 
