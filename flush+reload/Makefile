@@ -17,7 +17,7 @@ calibration: calibration.cpp util.hpp
 	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
 
 # aarch32
-all_arm: sender.arm receiver.arm calibration.arm
+arm: sender.arm receiver.arm calibration.arm
 
 sender.arm: sender.cpp util.hpp padding.hpp
 	$(CCARM) $(CFLAGS) -D__arm__ $(CEXTRAS) $^ -o $@
@@ -29,7 +29,7 @@ calibration.arm: calibration.cpp util.hpp
 	$(CCARM) $(CFLAGS) -D__arm__ $(CEXTRAS) $^ -o $@
 
 # aarch64
-all_arm64: sender.arm64 receiver.arm64 calibration.arm64
+arm64: sender.arm64 receiver.arm64 calibration.arm64
 
 sender.arm64: sender.cpp util.hpp padding.hpp
 	$(CCARM) $(CFLAGS) -D__arm64__ $(CEXTRAS) $^ -o $@
