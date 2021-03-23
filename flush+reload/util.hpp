@@ -175,13 +175,13 @@ CYCLES probe_block(ADDR_PTR addr)
 
 	asm volatile(
 		"dmb ld \n\t"
-		"msr pcccntr_el0, %[start]\n\t"
-		"ldr r8, [%[addr]] \n\t"
+		"msr pmccntr_el0, %[start]\n\t"
+		"ldr x8, [%[addr]] \n\t"
 		"dmb ld \n\t"
-		"msr pcccntr_el0, %[end]\n\t"
+		"msr pmccntr_el0, %[end]\n\t"
 		: [start] "=r" (cycles_start), [end] "=r" (cycles_end)
 		: [addr] "r" (addr)
-		: "r8"
+		: "x8"
 	);
 
 	return cycles_end - cycles_start;
@@ -210,12 +210,21 @@ CYCLES probe_block(ADDR_PTR addr)
 
 void access(void *addr)
 {
-    #if defined(__arm__) || defined(__arm64__)
+    #if defined(__arm__)
     asm volatile (
         "ldr r8, [%[addr]]"
         :
         : [addr] "r" (addr)
         : "r8"
+    );
+
+	#elif defined(__arm64__)
+
+	asm volatile (
+        "ldr x8, [%[addr]]"
+        :
+        : [addr] "r" (addr)
+        : "x8"
     );
 
     #else
@@ -256,7 +265,7 @@ CYCLES get_cycles()
 	 * RDTSC returns the number of cycles since reset
 	 * Obtain high resolution cycle/timing information
 	 */
-	
+
 	asm volatile(
 		"rdtsc"
 		: "=a" (time_lo), "=d" (time_hi)
