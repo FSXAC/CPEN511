@@ -4,6 +4,8 @@ unsigned int hit_threshold;
 
 int main(int argc, char *argv[])
 {
+	printf("=== RECEIVER PROGRAM ===");
+
 	/* Get the cycle threshold, default = 200 */
 	if (argc > 1)
 		hit_threshold = atoi(argv[1]);
@@ -14,7 +16,13 @@ int main(int argc, char *argv[])
 	 * Open the same file/victim/sender program
 	 * and map it in memory (since both victim and receiver knows the address)
 	 */
+	#if defined(__arm__)
+	int fd = open("sender.arm", O_RDONLY);
+	#elif defined(__arm64__)
+	int fd = open("sender.arm64", O_RDONLY);
+	#else
 	int fd = open("sender", O_RDONLY);
+	#endif
 	char *mapped = (char *) mmap(NULL, 0x20000, PROT_READ, MAP_PRIVATE, fd, 0);
 
 	// int num_ptrs = 0;

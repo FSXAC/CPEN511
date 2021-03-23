@@ -32,15 +32,20 @@ inline void send_bit(char c, int i)
 
 int main(void)
 {
-	printf("Victim/sender program now running.\n");
-	printf("Enter message to be sent through covert channel:\n");
+	printf("=== SENDER PROGRAM ===");
 
 	/**
 	 * Setup the covert channel by obtaining the address of the victim
 	 * 1. Open the sender program
 	 * 2. Map it to memory to get its address
 	 */
+	#if defined(__arm__)
+	int fd = open("sender.arm", O_RDONLY);
+	#elif defined(__arm64__)
+	int fd = open("sender.arm64", O_RDONLY);
+	#else
 	int fd = open("sender", O_RDONLY);
+	#endif
 	mapped = (char *) mmap(NULL, 0x20000, PROT_READ, MAP_PRIVATE, fd, 0);
 
 	/**
@@ -57,6 +62,10 @@ int main(void)
 	sendbit_arr[6] = ADDR_6 + mult * CACHE_LINE_SIZE;
 	sendbit_arr[7] = ADDR_7 + mult * CACHE_LINE_SIZE;
 	sendbit_arr[8] = ADDR_8 + mult * CACHE_LINE_SIZE;
+
+	/* Ready */
+	printf("Victim/sender program now running.\n");
+	printf("Enter message to be sent through covert channel:\n");
 
 	bool sending = true;
 	while (sending)
