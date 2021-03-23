@@ -32,13 +32,13 @@ calibration.arm: calibration.cpp util.hpp
 arm64: sender.arm64 receiver.arm64 calibration.arm64
 
 sender.arm64: sender.cpp util.hpp padding.hpp
-	$(CCARM64) $(CFLAGS) -D__arm64__ $(CEXTRAS) $^ -o $@
+	$(CCARM64) -march=armv8-a $(CFLAGS) -D__arm64__ $(CEXTRAS) $^ -o $@
 
 receiver.arm64: receiver.cpp util.hpp padding.hpp
-	$(CCARM64) $(CFLAGS) -D__arm64__ $(CEXTRAS) $^ -o $@
+	$(CCARM64) -march=armv8-a $(CFLAGS) -D__arm64__ $(CEXTRAS) $^ -o $@
 
 calibration.arm64: calibration.cpp util.hpp
-	$(CCARM64) $(CFLAGS) -D__arm64__ $(CEXTRAS) $^ -o $@
+	$(CCARM64) -march=armv8-a $(CFLAGS) -D__arm64__ $(CEXTRAS) $^ -o $@
 
 .PHONY: clean
 

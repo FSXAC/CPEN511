@@ -106,6 +106,8 @@ void init(void)
 	 * https://stackoverflow.com/questions/32374599/mcr-and-mrc-does-not-exist-on-aarch64
 	 */
 
+	// FIXME: There's illegal instruction somewhere here
+
 	asm volatile ("msr pmuserenr_el0, %0" :: "r" (1));
 	asm volatile ("msr pmintenclr_el1, %0" :: "r" (0x8000000f));
 	asm volatile ("msr pmcr_el0, %0" :: "r" (0x03));
