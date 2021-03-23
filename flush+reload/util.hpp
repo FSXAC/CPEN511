@@ -104,9 +104,12 @@ void init(void)
 	 * so we use MSR to access the system registers directy
 	 * 
 	 * https://stackoverflow.com/questions/32374599/mcr-and-mrc-does-not-exist-on-aarch64
+	 * 
+	 * http://zhiyisun.github.io/2016/03/02/How-to-Use-Performance-Monitor-Unit-(PMU)-of-64-bit-ARMv8-A-in-Linux.html
+	 * 
+	 * Maybe we these cannot be executed here and has to be
+	 * a kernel module to be loaded
 	 */
-
-	// FIXME: There's illegal instruction somewhere here
 
 	asm volatile ("msr pmuserenr_el0, %0" :: "r" (1));
 	asm volatile ("msr pmintenclr_el1, %0" :: "r" (0x8000000f));

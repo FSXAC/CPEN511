@@ -4,7 +4,7 @@ unsigned int hit_threshold;
 
 int main(int argc, char *argv[])
 {
-	printf("=== RECEIVER PROGRAM ===");
+	printf("=== RECEIVER PROGRAM ===\n");
 
 	/* Get the cycle threshold, default = 200 */
 	if (argc > 1)

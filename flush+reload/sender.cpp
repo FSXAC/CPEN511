@@ -32,7 +32,7 @@ inline void send_bit(char c, int i)
 
 int main(void)
 {
-	printf("=== SENDER PROGRAM ===");
+	printf("=== SENDER PROGRAM ===\n");
 
 	/* Initialize performance measuring for ARM */
 	#if defined(__arm__) || defined(__arm64__)
