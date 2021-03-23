@@ -12,6 +12,11 @@ int main(int argc, char *argv[])
 	else
 		hit_threshold = 200;
 
+	/* Initialize performance measuring for ARM */
+	#if defined(__arm__) || defined(__arm64__)
+	init();
+	#endif
+
 	/**
 	 * Open the same file/victim/sender program
 	 * and map it in memory (since both victim and receiver knows the address)

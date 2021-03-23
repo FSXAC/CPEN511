@@ -34,6 +34,11 @@ int main(void)
 {
 	printf("=== SENDER PROGRAM ===");
 
+	/* Initialize performance measuring for ARM */
+	#if defined(__arm__) || defined(__arm64__)
+	init();
+	#endif
+
 	/**
 	 * Setup the covert channel by obtaining the address of the victim
 	 * 1. Open the sender program

@@ -20,6 +20,8 @@ size_t miss_histogram[PROBES_RANGE];
 
 int main(void) {
 
+    printf("=== CALIBRATION PROGRAM ===");
+
     init();
 
     /* Set set-value of array to a bunch of -1 */
