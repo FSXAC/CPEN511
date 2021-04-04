@@ -47,6 +47,9 @@
 #define ADDR_7 0x8c27
 #define ADDR_8 0x9dae
 
+/* Hack: test skipping setting up PMU user enables */
+#define SKIP_PMU_ENABLE
+
 void init(void)
 {
 	#if defined(__arm__)

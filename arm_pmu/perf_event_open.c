@@ -1,3 +1,5 @@
+/* http://neocontra.blogspot.com/2013/05/user-mode-performance-counters-for.html */
+
 /** compile with -std=gnu99 */
 #define _GNU_SOURCE
 #include <stdio.h>

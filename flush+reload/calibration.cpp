@@ -22,7 +22,14 @@ int main(void) {
 
     printf("=== CALIBRATION PROGRAM ===\n");
 
-    init();
+    /* Initialize performance measuring for ARM */
+	#if defined(__arm__) || defined(__arm64__)
+	#ifdef SKIP_PMU_ENABLE
+	printf("Purposely skipped PMU enable for ARM\n")
+	#else
+	init();
+	#endif
+	#endif
 
     /* Set set-value of array to a bunch of -1 */
     memset(array, -1, 5 * 1024 * sizeof(size_t));
