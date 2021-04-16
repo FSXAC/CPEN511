@@ -12,7 +12,7 @@
 #define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
 
 #define PROBES_RANGE 1000
-#define PROBES 1000000
+#define PROBES 100
 
 size_t array[5*1024];
 size_t hit_histogram[PROBES_RANGE];
