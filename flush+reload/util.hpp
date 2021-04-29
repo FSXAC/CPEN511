@@ -50,7 +50,9 @@
 /* Hack: test skipping setting up PMU user enables */
 #define SKIP_PMU_ENABLE
 
-void init(void)
+
+/* This would have to be executed as part of a kernel module */
+void init_kernel_module(void)
 {
 	#if defined(__arm__)
 	/**
@@ -114,11 +116,16 @@ void init(void)
 	 * a kernel module to be loaded
 	 */
 
-	asm volatile ("msr pmuserenr_el0, %0" :: "r" (1));
-	asm volatile ("msr pmintenclr_el1, %0" :: "r" (0x8000000f));
-	asm volatile ("msr pmcr_el0, %0" :: "r" (0x03));
-	asm volatile ("msr pmcntenset_el0, %0" :: "r" (0x8000000f));
-	asm volatile ("msr pmovsclr_el0, %0" :: "r" (0x8000000f));
+	/*Enable user-mode access to counters. */
+	asm volatile("msr pmuserenr_el0, %0" : : "r"((u64)ARMV8_PMUSERENR_EN_EL0|ARMV8_PMUSERENR_ER|ARMV8_PMUSERENR_CR));
+
+	/*   Performance Monitors Count Enable Set register bit 30:0 disable, 31 enable. Can also enable other event counters here. */ 
+	asm volatile("msr pmcntenset_el0, %0" : : "r" (ARMV8_PMCNTENSET_EL0_ENABLE));
+
+	/* Enable counters */
+	u64 val=0;
+	asm volatile("mrs %0, pmcr_el0" : "=r" (val));
+	asm volatile("msr pmcr_el0, %0" : : "r" (val|ARMV8_PMCR_E));
 
 	#endif
 }
@@ -181,12 +188,13 @@ CYCLES probe_block(ADDR_PTR addr)
 	CYCLES cycles_start;
 	CYCLES cycles_end;
 
+	// asm volatile("mrs %0, pmccntr_el0" : "=r" (r));
 	asm volatile(
 		"dmb ld \n\t"
-		"msr pmccntr_el0, %[start]\n\t"
+		"mrs %[start], pmccntr_el0\n\t"
 		"ldr x8, [%[addr]] \n\t"
 		"dmb ld \n\t"
-		"msr pmccntr_el0, %[end]\n\t"
+		"mrs %[end], pmccntr_el0\n\t"
 		: [start] "=r" (cycles_start), [end] "=r" (cycles_end)
 		: [addr] "r" (addr)
 		: "x8"
@@ -262,7 +270,7 @@ CYCLES get_cycles()
 	#elif defined(__arm64__)
 
 	asm volatile (
-		"msr pmccntr_el0, %0"
+		"mrs %0, pmccntr_el0"
 		: "=r" (time_lo)
 	);
 	time_hi = 0;

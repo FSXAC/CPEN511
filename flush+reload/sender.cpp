@@ -34,14 +34,7 @@ int main(void)
 {
 	printf("=== SENDER PROGRAM ===\n");
 
-	/* Initialize performance measuring for ARM */
-	#if defined(__arm__) || defined(__arm64__)
-	#ifdef SKIP_PMU_ENABLE
-	printf("Purposely skipped PMU enable for ARM\n");
-	#else
-	init();
-	#endif
-	#endif
+	/* Assuming ARM PMU enabled already */
 
 	/**
 	 * Setup the covert channel by obtaining the address of the victim

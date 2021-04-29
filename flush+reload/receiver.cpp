@@ -12,14 +12,7 @@ int main(int argc, char *argv[])
 	else
 		hit_threshold = 200;
 
-	/* Initialize performance measuring for ARM */
-	#if defined(__arm__) || defined(__arm64__)
-	#ifdef SKIP_PMU_ENABLE
-	printf("Purposely skipped PMU enable for ARM\n");
-	#else
-	init();
-	#endif
-	#endif
+	/* Assuming ARM PMU enabled already */
 
 	/**
 	 * Open the same file/victim/sender program
