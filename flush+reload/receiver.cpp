@@ -11,7 +11,6 @@ int main(int argc, char *argv[])
 		hit_threshold = 200;
 	
 	printf("===[RECEIVER PROGRAM===\n");
-	printf("Hit/miss threshold is %d\n", hit_threshold);
 
 	/* Assuming ARM PMU enabled already */
 
