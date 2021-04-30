@@ -7,13 +7,13 @@ CCARM64=aarch64-linux-gnu-gcc
 # x86
 all: sender receiver calibration
 
-sender: sender.cpp util.hpp padding.hpp
+sender: sender.cpp
 	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
 
-receiver: receiver.cpp util.hpp padding.hpp
+receiver: receiver.cpp
 	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
 
-calibration: calibration.cpp util.hpp
+calibration: calibration.cpp
 	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
 
 # aarch32

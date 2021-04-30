@@ -87,5 +87,5 @@ class AutoTest:
             time.sleep(sleep)
 
 if __name__ == '__main__':
-    AutoTest.sweepThreshold(50, 280, 10, sleep=0.5)
+    AutoTest.sweepThreshold(50, 280, 10, sleep=0.1)
         
