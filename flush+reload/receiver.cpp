@@ -4,13 +4,13 @@ unsigned int hit_threshold;
 
 int main(int argc, char *argv[])
 {
-	printf("=== RECEIVER PROGRAM ===\n");
-
 	/* Get the cycle threshold, default = 200 */
 	if (argc > 1)
 		hit_threshold = atoi(argv[1]);
 	else
 		hit_threshold = 200;
+	
+	printf("===[RECEIVER PROGRAM===\n");
 
 	/* Assuming ARM PMU enabled already */
 
