@@ -40,6 +40,10 @@ receiver.arm64: receiver.cpp util.hpp padding.hpp
 calibration.arm64: calibration.cpp util.hpp
 	$(CCARM64) -march=armv8-a -static $(CFLAGS) -D__arm64__ $(CEXTRAS) $^ -o $@
 
+calibration.s.arm64: calibration.cpp util.hpp
+	$(CCARM64) -march=armv8-a -S -O0 -D__arm64__ $(CEXTRAS) $^
+
+
 .PHONY: clean
 
 clean:
