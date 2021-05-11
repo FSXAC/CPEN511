@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 	else
 		hit_threshold = 200;
 	
-	printf("===[RECEIVER PROGRAM===\n");
+	printf("===[RECEIVER PROGRAM===]\n");
 
 	/* Assuming ARM PMU enabled already */
 
