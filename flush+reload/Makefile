@@ -1,20 +1,21 @@
-CFLAGS=-std=c++11 -I /usr/local -O0
+# CFLAGS=-std=c++11 -I /usr/local -O2
+CFLAGS=-std=c++11
 CEXTRAS=
-CC=g++
+CC=gcc
 CCARM=arm-linux-gnueabihf-gcc
 CCARM64=aarch64-linux-gnu-gcc
 
 # x86
 all: sender receiver calibration
 
-sender: sender.cpp
-	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
+sender:
+	$(CC) $(CFLAGS) sender.cpp -o sender.x86
 
 receiver: receiver.cpp
-	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
+	$(CC) $(CFLAGS) receiver.cpp -o receiver.x86
 
 calibration: calibration.cpp
-	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
+	$(CC) $(CFLAGS) calibration.cpp -o calibration.x86
 
 # aarch32
 arm: sender.arm receiver.arm calibration.arm
@@ -47,6 +48,6 @@ calibration.s.arm64: calibration.cpp util.hpp
 .PHONY: clean
 
 clean:
-	rm -f $(HELPERS) sender receiver calibration
+	rm -f *.x86
 	rm -f *.arm
 	rm -f *.arm64
