@@ -1,5 +1,7 @@
 
 # Must use O0 because otherwise the NOP padding would be optimized away
+# It could cause the side channel to not work properly or even SIGBUS when
+# trying to read from memory
 CFLAGS=-std=c++11 -I /usr/local -O0
 CEXTRAS=
 CC=g++
@@ -43,22 +45,22 @@ calibration.s: calibration.cpp
 arm64: sender.arm64 receiver.arm64 calibration.arm64 sender.arm64.s receiver.arm64.s calibration.arm64.s
 
 sender.arm64: sender.cpp util.hpp padding.hpp
-	$(CCARM64) -march=armv8-a -static $(CFLAGS) -D__arm64__ $(CEXTRAS) $^ -o $@
+	$(CCARM64) -march=armv8-a -static $(CFLAGS) -D__arm64__ -DRUN_ONCE $(CEXTRAS) $^ -o $@
 
 receiver.arm64: receiver.cpp util.hpp padding.hpp
-	$(CCARM64) -march=armv8-a -static $(CFLAGS) -D__arm64__ $(CEXTRAS) $^ -o $@
+	$(CCARM64) -march=armv8-a -static $(CFLAGS) -D__arm64__ -DRUN_ONCE $(CEXTRAS) $^ -o $@
 
 calibration.arm64: calibration.cpp util.hpp
-	$(CCARM64) -march=armv8-a -static $(CFLAGS) -D__arm64__ $(CEXTRAS) $^ -o $@
+	$(CCARM64) -march=armv8-a -static $(CFLAGS) -D__arm64__ -DRUN_ONCE $(CEXTRAS) $^ -o $@
 
 sender.arm64.s: sender.cpp util.hpp padding.hpp
-	$(CCARM64) -march=armv8-a -S -D__arm64__ $(CEXTRAS) $^
+	$(CCARM64) -march=armv8-a -S -D__arm64__ -DRUN_ONCE $(CEXTRAS) $^
 
 receiver.arm64.s: receiver.cpp util.hpp padding.hpp
-	$(CCARM64) -march=armv8-a -S -D__arm64__ $(CEXTRAS) $^
+	$(CCARM64) -march=armv8-a -S -D__arm64__ -DRUN_ONCE $(CEXTRAS) $^
 
 calibration.arm64.s: calibration.cpp util.hpp
-	$(CCARM64) -march=armv8-a -S -D__arm64__ $(CEXTRAS) $^
+	$(CCARM64) -march=armv8-a -S -D__arm64__ -DRUN_ONCE $(CEXTRAS) $^
 
 
 .PHONY: clean
