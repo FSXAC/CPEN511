@@ -1,0 +1,3 @@
+[submodule "SpectrePoC"]
+	path = SpectrePoC
+	url = https://github.com/crozone/SpectrePoC.git
