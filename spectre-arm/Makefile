@@ -1,4 +1,4 @@
-CFLAGS = -O0 -pie -Wall -Wextra -std=c99
+CFLAGS = -O0 -pie -std=c99
 LIBFLUSH_CFLAGS = -I. -L.
 CCARM64=aarch64-linux-gnu-gcc
 PROGRAM = spectre
