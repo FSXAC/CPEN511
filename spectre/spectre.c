@@ -18,7 +18,7 @@
 #include <stdint.h>
 #include <x86intrin.h>
 
-#define MAX_TRIES 100
+#define MAX_TRIES 10
 
 /********************************************************************
 Victim code.
@@ -164,7 +164,7 @@ int main(int argc, const char **argv)
 {
 
 	/* Default to a cache hit threshold of 80 */
-	int cache_hit_threshold = 80;
+	int cache_hit_threshold = 50;
 
 	/* Default for malicious_x is the secret string address */
 	size_t malicious_x = (size_t)(secret - (char *)array1);
