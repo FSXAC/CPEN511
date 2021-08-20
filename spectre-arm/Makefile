@@ -1,4 +1,4 @@
-CFLAGS = -Og -pie -std=c99
+CFLAGS = -O1 -pie -std=c99
 CCARM64=aarch64-linux-gnu-gcc
 PROGRAM = spectre
 SOURCE = source.c
@@ -9,7 +9,7 @@ spectre.arm64: $(SOURCE)
 	$(CCARM64) $(CFLAGS) -march=armv8-a -o $@ $<
 
 spectre-debug.arm64: $(SOURCE)
-	$(CCARM64) $(CFLAGS) -DDEBUG -march=armv8-a -o $@ $<
+	$(CCARM64) $(CFLAGS) -static -DDEBUG -march=armv8-a -o $@ $<
 
 spectre-static.arm64: $(SOURCE)
 	$(CCARM64) $(CFLAGS) -static -march=armv8-a -o $@ $<
