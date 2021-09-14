@@ -10,6 +10,7 @@ void test() {
 
 int main(void) {
     int sum;
+    test();
     for (int i = 0; i < 100; i++) {
         sum += x[i];
     }
