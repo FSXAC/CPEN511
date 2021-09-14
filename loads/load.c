@@ -1,9 +1,17 @@
-int main(void) {
-    int sum = 0;
-    for (int i = 0; i < 30; i++) {
-        if (i % 2 == 0) {
-            sum += i;
+char x[100];
+
+void test() {
+    for (int i = 0; i < 100; i++) {
+        if (i > 30) {
+            x[i] += i;
         }
+    }
+}
+
+int main(void) {
+    int sum;
+    for (int i = 0; i < 100; i++) {
+        sum += x[i];
     }
     return sum;
 }
