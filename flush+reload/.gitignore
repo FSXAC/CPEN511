@@ -6,3 +6,4 @@ receiver_out.txt
 *.arm
 *.arm32
 *.arm64
+*.x86

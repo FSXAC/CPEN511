@@ -57,7 +57,9 @@ int main(void) {
     /* Compute stats */
     int hit_max = 0;
     int hit_max_index = 0;
-    int miss_min_index = 0;
+
+    int miss_max = 0;
+    int miss_max_index = 0;
 
     /* Write histogram to file */
     FILE *out_file = fopen("calibration_stats.csv", "w");
@@ -73,22 +75,16 @@ int main(void) {
             hit_max_index = i;
         }
 
-        if (miss_histogram[i] > 3 && miss_min_index == 0)
-            miss_min_index = i;
-    }
-
-    int min = -1;
-    int min_index = 0;
-    for (int i = hit_max_index; i < miss_min_index; i++) {
-        if (min > (hit_histogram[i] + miss_histogram[i])) {
-            min = hit_histogram[i] + miss_histogram[i];
-            min_index = i;
+        if (miss_max < miss_histogram[i]) {
+            miss_max = miss_histogram[i];
+            miss_max_index = i;
         }
     }
     fclose(out_file);
 
     printf("Calibration histogram saved in calibration_stats.csv\n");
-    printf("Suggested cache hit/miss threshold: %d\n", min_index);
+    printf("Hit cycle: %d\nMiss cycle: %d\n", hit_max_index, miss_max_index);
+    printf("Suggested hit/miss threshold: %d\n", (hit_max_index - miss_max_index) / 2 + miss_max_index);
 
     return 0;
 }

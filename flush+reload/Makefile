@@ -5,28 +5,16 @@ CCARM=arm-linux-gnueabihf-gcc
 CCARM64=aarch64-linux-gnu-gcc
 
 # x86
-all: sender receiver calibration
+all: sender.x86 receiver.x86 calibration.x86
 
-sender: sender.cpp util.hpp padding.hpp
+sender.x86: sender.cpp util.hpp padding.hpp
 	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
 
-receiver: receiver.cpp util.hpp padding.hpp
+receiver.x86: receiver.cpp util.hpp padding.hpp
 	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
 
-calibration: calibration.cpp util.hpp
+calibration.x86: calibration.cpp util.hpp
 	$(CC) $(CFLAGS) $(CEXTRAS) $^ -o $@
-
-# aarch32
-arm: sender.arm receiver.arm calibration.arm
-
-sender.arm: sender.cpp util.hpp padding.hpp
-	$(CCARM) $(CFLAGS) -D__arm__ $(CEXTRAS) $^ -o $@
-
-receiver.arm: receiver.cpp util.hpp padding.hpp
-	$(CCARM) $(CFLAGS) -D__arm__ $(CEXTRAS) $^ -o $@
-
-calibration.arm: calibration.cpp util.hpp
-	$(CCARM) $(CFLAGS) -D__arm__ $(CEXTRAS) $^ -o $@
 
 # aarch64
 arm64: sender.arm64 receiver.arm64 calibration.arm64
@@ -43,6 +31,8 @@ calibration.arm64: calibration.cpp util.hpp
 .PHONY: clean
 
 clean:
-	rm -f $(HELPERS) sender receiver calibration
+	rm -f $(HELPERS)
+	rm -f *.x86
 	rm -f *.arm
 	rm -f *.arm64
+	rm -f calibration_stats.csv
