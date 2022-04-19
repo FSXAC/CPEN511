@@ -14,6 +14,9 @@ spectre-debug.arm64: $(SOURCE)
 spectre-static.arm64: $(SOURCE)
 	$(CCARM64) $(CFLAGS) -static -march=armv8-a -o $@ $<
 
+spectre-static.arm64-arm: $(SOURCE)
+	gcc $(CFLAGS) -o $@ $<
+
 spectre-mix.arm64: $(SOURCE)
 	$(CCARM64) $(CFLAGS) -DMIX -march=armv8-a -o $@ $<
 
