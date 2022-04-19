@@ -189,7 +189,7 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 	for (i = 0; i < 256; i++)
 	{
 		timing[i] /= MAX_TRIES;
-		printf("\n%d: %d (%f)\n", i, results[i], timing[i]);
+		printf("\n%d: %f\n", i, timing[i]);
 	}
 
 	results[0] ^= junk; /* use junk so code above won't get optimized out*/
